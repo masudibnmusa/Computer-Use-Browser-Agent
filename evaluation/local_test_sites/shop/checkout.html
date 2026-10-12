@@ -1,0 +1,12 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Checkout</title></head>
+<body>
+  <h1>Checkout</h1>
+  <p>Order summary for your item.</p>
+  <form onsubmit="event.preventDefault(); document.title='ORDER PLACED'; document.body.append('Order placed!');">
+    <label for="name">Full name</label><input id="name" type="text"><br>
+    <label for="email">Email</label><input id="email" type="email"><br>
+    <label for="addr">Address</label><input id="addr" type="text"><br>
+    <button type="submit">Place order</button>
+  </form>
+</body></html>
