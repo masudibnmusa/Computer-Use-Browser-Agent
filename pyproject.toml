@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "browser-agent"
+version = "0.1.0"
+description = "Browser agent: screenshots + DOM grounding, Claude tool use, Playwright"
+requires-python = ">=3.10"
+dependencies = [
+  "playwright>=1.49",
+  "anthropic>=0.50",
+  "pydantic>=2.6",
+  "pydantic-settings>=2.2",
+  "pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+browser-agent = "browser_agent.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
